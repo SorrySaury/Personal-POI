@@ -1,0 +1,74 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".fragment.MapFragment">
+
+    <!-- TODO: Update blank fragment layout -->
+    <android.support.constraint.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        tools:context=".MainActivity">
+
+        <Button
+            android:id="@+id/search"
+            android:layout_width="373dp"
+            android:layout_height="50dp"
+            android:layout_marginStart="36dp"
+            android:layout_marginTop="6dp"
+            android:layout_marginEnd="36dp"
+            android:background="#fff"
+            android:text=" 搜索地点"
+            android:textAlignment="viewStart"
+            android:textColor="@android:color/darker_gray"
+            android:textSize="18sp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="@+id/bmapView" />
+
+        <com.baidu.mapapi.map.MapView
+            android:id="@+id/bmapView"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:clickable="true"
+            tools:layout_editor_absoluteX="0dp"
+            tools:layout_editor_absoluteY="-16dp">
+
+        </com.baidu.mapapi.map.MapView>
+
+        <Button
+            android:id="@+id/getMyLocation"
+            android:layout_width="40dp"
+            android:layout_height="40dp"
+            android:layout_marginEnd="7dp"
+            android:layout_marginBottom="100dp"
+            android:background="@android:drawable/ic_menu_mylocation"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent" />
+
+        <Button
+            android:id="@+id/route"
+            android:layout_width="50dp"
+            android:layout_height="50dp"
+            android:layout_marginEnd="1dp"
+            android:layout_marginBottom="140dp"
+            android:background="@android:drawable/ic_menu_directions"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent" />
+
+        <Button
+            android:id="@+id/diyroute"
+            android:layout_width="50dp"
+            android:layout_height="50dp"
+            android:layout_marginEnd="1dp"
+            android:layout_marginBottom="188dp"
+            android:background="@android:drawable/ic_menu_view"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent" />
+
+
+    </android.support.constraint.ConstraintLayout>
+
+</FrameLayout>

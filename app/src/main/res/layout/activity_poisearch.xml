@@ -1,0 +1,72 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    tools:context=".PoiSearchActivity">
+
+    <include layout="@layout/common_title"/>
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="40dp"
+        android:background="#fff"
+        android:clipToPadding="true"
+        android:fitsSystemWindows="true">
+
+
+        <Button
+            android:id="@+id/back"
+            android:layout_width="40dp"
+            android:layout_height="50dp"
+            android:layout_alignParentLeft="true"
+            android:layout_alignParentBottom="true"
+            android:drawableLeft="@mipmap/back_black"
+            android:drawablePadding="20dp"
+            android:gravity="center"
+            android:paddingTop="20dp"
+            android:background="#fff"
+            android:paddingLeft="10dp"
+            android:stateListAnimator="@null"
+            android:paddingBottom="20dp" />
+
+        <RelativeLayout
+            android:id="@+id/clear"
+            android:layout_width="352dp"
+            android:layout_height="match_parent"
+            android:layout_alignParentTop="true"
+            android:layout_alignParentBottom="true"
+            android:layout_marginBottom="0dp"
+            android:layout_toRightOf="@id/back"
+            android:orientation="horizontal"
+            >
+
+            <com.sorry.personalpoi.view.ClearEditText
+                android:id="@+id/keyword"
+                android:layout_width="match_parent"
+                android:layout_height="40dp"
+                android:layout_alignParentBottom="true"
+                android:background="#fff"
+                android:drawableRight="@mipmap/setnull"
+                android:drawablePadding="10dp"
+                android:paddingLeft="10dp"
+
+
+                android:hint="搜索地点"
+                android:singleLine="true"
+                android:textAlignment="viewStart"
+                android:textSize="18sp" />
+
+
+        </RelativeLayout>
+    </RelativeLayout>
+
+    <ListView
+        android:id="@+id/results"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent" />
+
+
+</LinearLayout>
